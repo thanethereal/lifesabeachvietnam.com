@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Itim|Lobster|Montserrat:500|Noto+Serif|Nunito|Patrick+Hand|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto+Slab|Saira" rel="stylesheet">
+
+    <title>Header Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../static/img/527619306.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="../static/img/445476376.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="../static/img/527619253.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="../static/img/445850512.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="../static/img/527619249.jpg" alt=""></div>
+                <!-- Thêm các slide khác ở đây -->
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <section class="description-section">
+        <div class="description-content">
+            <div class="description-text">
+                <p>
+                    
+Life’s a Beach, founded by Gavin, Steve, and their family in 2014, offers a tranquil escape amidst Vietnam’s natural beauty. Perched atop a jungle-clad hill overlooking a secluded beach, it welcomes guests with a laid-back atmosphere and warm hospitality.
+                </p>
+            </div>
+            <div class="description-image">
+                <img src="../static/img/10.jpg" alt="Description Image">
+            </div>
+        </div>
+    </section>
+    <section class="description-section">
+        <div class="description-content">
+            <div class="description-image">
+                <img src="../static/img/1.jpg" alt="Description Image">
+            </div>
+            <div class="description-text">
+                <p>
+                    Accommodation options, from dormitories to beachfront bungalows, cater to diverse budgets, while amenities such as Wi-Fi, comfortable beds, and hot showers ensure a comfortable stay. Whether guests seek relaxation, romance, cultural immersion, or social engagement, Life’s a Beach promises a memorable retreat.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="grid">
+            <div class="grid-item">
+                <a href="http://3.112.51.97:5000/beach_bar_restaurant">
+                    <div class="content">
+                        <img src="../static/img/2.jpg" alt="Image 1">
+                        <p>Beach bar & Restaurant</p>
+                    </div>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="http://3.112.51.97:5000/accomodations">
+                    <div class="content">
+                        <p>Accomodation</p>
+                        <img src="../static/img/527619306.jpg" alt="Image 2">
+                    </div>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="http://3.112.51.97:5000/activities">
+                    <div class="content">
+                        <img src="../static/img/4.jpg" alt="Image 3">
+                        <p>Activities</p>
+                    </div>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="http://3.112.51.97:5000/gettinghere">
+                    <div class="content">
+                        <p>Getting here </p>
+                        <img src="../static/img/5.jpg" alt="Image 4">
+                    </div>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="http://3.112.51.97:5000/aboutus">
+                    <div class="content">
+                        <img src="../static/img/7.jpg" alt="Image 5">
+                        <p>About us</p>
+                    </div>
+                </a>
+            </div>
+            <div class="grid-item">
+                <div class="content">
+                    <p>News</p>
+                    <img src="../static/img/8.jpg" alt="Image 6">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="booking-container">
+        <!-- Booking Button -->
+        <button class="booking-button" onclick="redirectToBookingPage()">Booking Now</button>
+        <!-- End Booking Button -->
+    </div>
+    
+    <!-- End Booking Button -->
+    <footer class="footer">
+        <div>
+            <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i> Facebook</a>
+            <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i> Instagram</a>
+            <a href="https://www.youtube.com/"><i class="fa fa-youtube"></i> YouTube</a>
+            <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+        </div>
+        <div>
+            <p><i class="fa fa-phone"></i> Phone: +84 978931085</p>
+            <p><i class="fa fa-envelope"></i> Email: info@lifesabeachvietnam.com</p>
+            <p><i class="fa fa-map-marker"></i> Address: Thôn 2 Bãi Bàng, QL1D, Xuân Hải, Sông Cầu, Phú Yên 560000, Vietnam</p>
+        </div>
+    </footer>
+    
+
+    <script>
+        function redirectToBookingPage() {
+            // Replace the URL with your booking page URL
+            window.location.href = "https://925a4e94691ca736.sirvoy.me/";
+        }
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 2000, // Thời gian hiển thị của mỗi slide (ms)
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+</html>

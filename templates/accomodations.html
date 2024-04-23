@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Itim|Lobster|Montserrat:500|Noto+Serif|Nunito|Patrick+Hand|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto+Slab|Saira" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+    <title>Life’s a beach VietNam</title>
+    <style>
+        table {
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        td {
+            border: 1px solid #dddddd;
+            padding: 20px; /* Khoảng cách giữa nội dung và viền */
+            text-align: center;
+            cursor: pointer; /* Con trỏ biến thành pointer khi di chuột qua ô */
+            font-size: xx-large;
+        }
+
+        .image-container {
+            position: relative;
+            width: 150px; /* Kích thước ảnh */
+            height: 150px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%; /* Hình tròn */
+            border: 2px dashed #aaa; /* Viền dash */
+        }
+
+        @media only screen and (min-width: 768px) {
+            .body, html{
+                font-size: xx-large;
+            }
+            .cell {
+                justify-content: space-between;
+                align-items: center;
+            }
+            .image-container {
+                margin-left: 40%; /* Khoảng cách giữa ảnh và văn bản */
+            }
+            .text {
+                flex: 1; /* Văn bản chiếm phần còn lại của ô */
+            }
+
+            .button{
+                font-size: xx-large;
+            }
+            .accommodation-info{
+                font-size: xx-large;
+            }
+        }
+    
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0); }
+        }
+
+        .button {
+            animation: bounce 2s infinite; /* Áp dụng animation */
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../static/img/527619306.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="../static/img/445476376.jpg" alt=""></div>
+                <!-- Thêm các slide khác ở đây -->
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <div class="accommodation-info">
+        <div class="info-content">
+            <h2>Welcome to Our Accommodation</h2>
+            <p>Discover a peaceful retreat nestled in the heart of nature. Our accommodation offers breathtaking views, luxurious amenities, and personalized service to make your stay unforgettable.</p>
+            <p>Whether you're seeking relaxation or adventure, we have something for everyone. Explore scenic hiking trails, relax by the pool, or indulge in a spa treatment. Our friendly staff is here to ensure you have a memorable experience.</p>
+        </div>
+    </div>
+    <div style="font-size: large;"><p>Click in image to see another images</p></div>
+    <table>
+        <tr>
+            <td class="cell">
+                <div class="image-container">
+                    <a href="../static/img/Dorm rooms.jpg" data-fancybox="gallery1">
+                        <img src="../static/img/Dorm rooms.jpg" alt="Image 1">
+                    </a>
+                    <a href="../static/img/527619201.jpg" data-fancybox="gallery1" style="display: none;"></a>
+                </div>
+                <div class="text">Dorm</div>
+            </td>
+            <td class="cell">
+                <div class="image-container">
+                    <a href="../static/img/527621398.jpg" data-fancybox="gallery2">
+                        <img src="../static/img/527621398.jpg" alt="Image 1">
+                    </a>
+                </div>
+                <a href="../static/img/527621546.jpg" data-fancybox="gallery2" style="display: none;"></a>
+                <a href="../static/img/527621524.jpg" data-fancybox="gallery2" style="display: none;"></a>
+                <div class="text">Bamboo</div>
+            </td>
+        </tr>
+        <tr>
+            <td class="cell">
+                <div class="image-container">
+                    <a href="../static/img/445461334.jpg" data-fancybox="gallery3">
+                        <img src="../static/img/445461334.jpg" alt="Image 1">
+                    </a>
+                    <a href="../static/img/405371919_730850679061813_4579364728285849026_n.jpg" data-fancybox="gallery3" style="display: none;"></a>
+                </div>
+                <div class="text">Tent</div>
+            </td>
+            <td class="cell">
+                <div class="image-container">
+                    <a href="../static/img/445476376.jpg" data-fancybox="gallery4">
+                        <img src="../static/img/527619253.jpg" alt="Image 1">
+                    </a>
+                </div>
+                <div class="text">Ensute delux</div>
+            </td>
+        </tr>
+    </table>
+
+
+    <div class="booking-container">
+        <!-- Booking Button -->
+        <button class="booking-button" onclick="redirectToBookingPage()">Booking Now</button>
+        <!-- End Booking Button -->
+    </div>
+    
+    <!-- End Booking Button -->
+    <footer class="footer">
+        <div>
+            <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i> Facebook</a>
+            <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i> Instagram</a>
+            <a href="https://www.youtube.com/"><i class="fa fa-youtube"></i> YouTube</a>
+            <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+        </div>
+        <div>
+            <p><i class="fa fa-phone"></i> Phone: +84 978931085</p>
+            <p><i class="fa fa-envelope"></i> Email: info@lifesabeachvietnam.com</p>
+            <p><i class="fa fa-map-marker"></i> Address: Thôn 2 Bãi Bàng, QL1D, Xuân Hải, Sông Cầu, Phú Yên 560000, Vietnam</p>
+        </div>
+    </footer>
+    
+
+    <script>
+        function redirectToBookingPage() {
+            // Replace the URL with your booking page URL
+            window.location.href = "https://925a4e94691ca736.sirvoy.me/";
+        }
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 2000, // Thời gian hiển thị của mỗi slide (ms)
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+    <!-- JavaScript để kích hoạt Fancybox -->
+    <script>
+        $(document).ready(function() {
+            $("[data-fancybox]").fancybox({
+                buttons: [
+                    "slideShow",
+                    "fullScreen",
+                    "thumbs",
+                    "close"
+            ],
+            loop: true
+        });
+    });
+</script>
+</body>
+</html>
